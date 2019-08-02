@@ -363,13 +363,13 @@ Resources:
       UserData: 
          Fn::Base64:
             !Sub |
-        #!/bin/bash
-        yum update -y
-        yum install http -y
-        service httpd start
-        checkconfig httpd on
-        cd /var/www/html
-        echo “<html><h1>Awesome Sudarsana</h1></html>” > index.html
+             #!/bin/bash 
+             yum update -y
+             yum install http -y
+             service httpd start
+             checkconfig httpd on
+             cd /var/www/html
+             echo “<html><h1>Awesome Sudarsana</h1></html>” > index.html
       ImageId: !FindInMap 
          - AWSRegionArch2AMI
          - !Ref 'AWS::Region'
