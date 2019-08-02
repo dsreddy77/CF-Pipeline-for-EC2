@@ -360,7 +360,9 @@ Resources:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
       KeyName: !Ref KeyName
-      UserData: Fn::Base64: !Sub |
+      UserData: 
+         Fn::Base64:
+            !Sub |
         #!/bin/bash
         yum update -y
         yum install http -y
